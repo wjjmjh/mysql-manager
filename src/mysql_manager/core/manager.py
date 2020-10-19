@@ -2,10 +2,8 @@ import mysql.connector
 
 
 class MySQLManager:
-    def __init__(self, host, db):
-        self.mydb = mysql.connector.connect(
-            host=host, user="remote", password="12345%$#@!"
-        )
+    def __init__(self, host, user, password, db):
+        self.mydb = mysql.connector.connect(host=host, user=user, password=password)
         if self.mydb.is_connected():
             print("MySQL Database has been successfully connected!")
             self.cursor = self.mydb.cursor()
