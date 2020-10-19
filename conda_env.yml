@@ -1,0 +1,14 @@
+name: lib_mysql_manager
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - pip
+  - python=3.7
+  - pip:
+    - --editable .
+    - mysql-connector-python
+    - pytest
+    - tox
+    - black
+    - isort
